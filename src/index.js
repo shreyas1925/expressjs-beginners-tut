@@ -1,14 +1,17 @@
 const path = require("path");
 const express = require("express");
 var app = express();
+const hbs = require("hbs");
 
-const spath = path.join(__dirname, "../public"); //first of all in home page my
-// .html file will be loading
+const spath = path.join(__dirname, "../public");
+//first of all in home page my .html file will be loading
 // then after routing differnt hbs files will be available
-const templatePath = path.join(__dirname, "../templates");
+const templatePath = path.join(__dirname, "../templates/views");
+const partialsPath = path.join(__dirname, "../templates/partials");
 
 app.set("view engine", "hbs");
 app.set("views", templatePath);
+hbs.registerPartials(partialsPath);
 // template engine
 
 app.get("/about", (req, res) => {
@@ -30,8 +33,8 @@ app.use(express.static(spath));
 //   res.send("hello world");
 // });
 
-app.listen(3300, () => {
-  console.log("Listening");
+app.listen(5000, () => {
+  console.log(`Listening at port 5000`);
 });
 
 // Using template engines such as pug,ejs,handlebars
@@ -45,3 +48,9 @@ app.listen(3300, () => {
 // In express if we want to use hbs then folder name by default should views
 // lets customize the foldet views
 // we have to use app.set() to set the customized folder name
+
+// *********************************************************//
+
+// Now lets use partials
+// Partials is same as common file in other development languages, using partials we dont have to write the same component of code repeatedly
+// for example navigation,footer,and some components

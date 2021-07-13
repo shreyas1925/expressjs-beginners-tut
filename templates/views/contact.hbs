@@ -3,10 +3,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Handlebars</title>
+    <title>Document</title>
   </head>
   <body>
-    <h1>Hello handlebars</h1>
-    <h3>{{name}}</h3>
+    {{>header}} 
+    {{!-- using header partials here --}}
+    <h1>Welcome to Contact page</h1>
+    <h3>{{email}}</h3>
   </body>
 </html>
