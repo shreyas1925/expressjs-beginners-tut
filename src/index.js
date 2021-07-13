@@ -14,19 +14,25 @@ app.set("views", templatePath);
 hbs.registerPartials(partialsPath);
 // template engine
 
+app.get("/", (req, res) => {
+  res.render("index");
+});
+
 app.get("/about", (req, res) => {
-  res.render("index", {
-    name: "Shreyas", //just demonstarting how to send dynamic data
+  res.render("about", {
+    name: "Shreyas",
+    //just demonstarting how to send dynamic data
   });
 });
 app.get("/contact", (req, res) => {
   res.render("contact", {
-    email: "shreyasshettigar34@gmail.com", //just demonstarting how to send dynamic data
+    email: "shreyasshettigar34@gmail.com",
+    //just demonstarting how to send dynamic data
   });
 });
 // It follows top to bottom rule
 
-app.use(express.static(spath));
+// app.use(express.static(spath));
 // we can keep both dynamic and static files
 
 // app.get("/", function (req, res) {
@@ -54,3 +60,5 @@ app.listen(5000, () => {
 // Now lets use partials
 // Partials is same as common file in other development languages, using partials we dont have to write the same component of code repeatedly
 // for example navigation,footer,and some components
+
+// Complete express will be uploaded

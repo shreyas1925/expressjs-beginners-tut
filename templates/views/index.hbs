@@ -3,12 +3,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Handlebars</title>
+    <title>Document</title>
+    <style>
+      .main{
+        height: 80vh;
+      }
+    </style>
   </head>
   <body>
+    <div class="main">
     {{>header}} 
     {{!-- using header partials here --}}
-    <h1>Hello handlebars</h1>
-    <h3>{{name}}</h3>
+    <h1>Welcome to Home page of Handlebars</h1>
+    <h4>static web can also been served which is commented in index.js uncomment // app.use(express.static(spath)) to get static home page</h4>
+    </div>
+    
+     {{>footer}}
   </body>
 </html>
