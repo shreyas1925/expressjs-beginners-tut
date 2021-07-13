@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <script type="text/javascript">
+      function back() {
+        var value = document.getElementById("d").value;
+        document.getElementById("d").value = value.substr(0, value.length - 1);
+      }
+    </script>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 mx-auto">
+          <div class="form-control mt-5 pb-3">
+            <h1 class="text-center display-5 mt-5 mb-4">Simple Calculator</h1>
+            <div class="form-group text-center">
+              <form name="forms">
+                <input type="text" id="d" name="answer" /><br /><br />
+
+                <input
+                  type="button"
+                  value="C"
+                  class="btn btn-outline-warning"
+                  onclick="back()"
+                />
+
+                <input
+                  type="button"
+                  value="/"
+                  class="btn btn-outline-info"
+                  onclick="forms.answer.value+='/' "
+                />
+
+                <input
+                  type="button"
+                  value="+"
+                  class="btn btn-outline-info"
+                  onclick="forms.answer.value+='+' "
+                />
+
+                <input
+                  type="button"
+                  value="AC"
+                  class="btn btn-outline-danger"
+                  onclick="forms.answer.value='' "
+                />
+
+                <br />
+                <br />
+
+                <input
+                  type="button"
+                  value="9"
+                  id="1"
+                  class="btn btn-outline-info"
+                  onclick="forms.answer.value+='9' "
+                />
+
+                <input
+                  type="button"
+                  value="8"
+                  id="1"
+                  class="btn btn-outline-info"
+                  onclick="forms.answer.value+='8' "
+                />
+
+                <input
+                  type="button"
+                  value="7"
+                  id="1"
+                  class="btn btn-outline-info"
+                  onclick="forms.answer.value+='7' "
+                />
+
+                <input
+                  type="button"
+                  value="+"
+                  id="om"
+                  class="btn btn-outline-info"
+                  onclick="forms.answer.value+='+' "
+                />
+
+                <br />
+                <br />
+
+                <input
+                  type="button"
+                  value="6"
+                  class="btn btn-outline-info"
+                  onclick="forms.answer.value+='6' "
+                />
+
+                <input
+                  type="button"
+                  value="5"
+                  class="btn btn-outline-info"
+                  onclick="forms.answer.value+='5' "
+                />
+
+                <input
+                  type="button"
+                  value="4"
+                  class="btn btn-outline-info"
+                  onclick="forms.answer.value+='4' "
+                />
+
+                <input
+                  type="button"
+                  value="-"
+                  class="btn btn-outline-info"
+                  onclick="forms.answer.value+='-' "
+                />
+
+                <br />
+                <br />
+
+                <input
+                  type="button"
+                  value="3"
+                  class="btn btn-outline-info"
+                  onclick="forms.answer.value+='3' "
+                />
+
+                <input
+                  type="button"
+                  value="2"
+                  class="btn btn-outline-info"
+                  onclick="forms.answer.value+='2' "
+                />
+
+                <input
+                  type="button"
+                  value="1"
+                  class="btn btn-outline-info"
+                  onclick="forms.answer.value+='1' "
+                />
+
+                <input
+                  type="button"
+                  value="*"
+                  class="btn btn-outline-info"
+                  onclick="forms.answer.value+='*' "
+                />
+                <br />
+                <br />
+
+                <input
+                  type="button"
+                  value="0"
+                  class="btn btn-outline-info"
+                  onclick="forms.answer.value+='0' "
+                />
+
+                <input
+                  type="button"
+                  value="."
+                  class="btn btn-outline-info"
+                  onclick="forms.answer.value+='.' "
+                />
+
+                <input
+                  type="button"
+                  value="%"
+                  class="btn btn-outline-info"
+                  onclick="forms.answer.value+='%' "
+                />
+
+                <input
+                  type="button"
+                  value="="
+                  class="btn btn-outline-success"
+                  onclick="forms.answer.value=eval(forms.answer.value) "
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

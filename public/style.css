@@ -1,0 +1,49 @@
+* {
+  margin: 0px;
+  padding: opx;
+  box-sizing: border-box;
+}
+body {
+  background-color: #262626;
+}
+#background {
+  width: 100vw;
+  height: 100vh;
+  background-color: aqua;
+  display: grid;
+  place-items: center;
+}
+
+#calci {
+  height: 50vh;
+  width: 320px;
+  margin: auto;
+  background-color: lightslategrey;
+  border: 1px solid black;
+}
+
+input[type="text"] {
+  width: 319px;
+  height: 40px;
+}
+
+input[type="button"] {
+  margin: 7px;
+  width: 62px;
+  height: 50px;
+}
+
+input[type="button"]:hover {
+  margin: 7px;
+  width: 62px;
+  height: 50px;
+  cursor: pointer;
+}
+#om {
+}
+#c {
+  background-color: red;
+}
+
+form {
+}
